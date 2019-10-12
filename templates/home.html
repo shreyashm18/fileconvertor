@@ -5,53 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <style> .center {
-       
-    
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        margin-top: -100px;
-        margin-left: -200px;
-    }
-    .greeting{
-        position: fixed;
-        top: 20%;
-        left: 35%
-        
-    }
-</style>
-    <title>Word to PDF</title>
+    <title>Home</title>
 </head>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link active" href=" {% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-            
+            <a class="nav-item nav-link active" href=" ">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="{% url 'wordtopdf' %}">Word to PDF</a>
             <a class="nav-item nav-link" href="#">PDF to Word</a>
             
           </div>
         </div>
       </nav>
-<body>
-    
-    <h2 class="greeting">Welcome to Word to PDF convertor</h2>
 
-    <form action="{% url 'wordtopdf' %}" method="POST">
-        
-        <div class="center">
-                {% csrf_token %}
-        
-        Select your word file : <input type="file" name="wordfile"><br>
-
-        <input type="submit" value="upload">
-    </div>
-    </form>
-    
+      <h3><center>Welcome to Convertor site</center></h3>
+      <p><center>Here you can convert your file format form word file(.docx) to PDF file(.pdf)</center></p>
 </body>
 </html>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
