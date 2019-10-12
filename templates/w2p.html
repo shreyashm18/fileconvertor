@@ -41,10 +41,10 @@
     
     <h2 class="greeting">Welcome to Word to PDF convertor</h2>
 
-    <form action="{% url 'wordtopdf' %}" method="POST">
+    <form action="{% url 'wordtopdf' %}" method="POST" enctype="multipart/form-data">
         
         <div class="center">
-                {% csrf_token %}
+            {% csrf_token %}
         
         Select your word file : <input type="file" name="wordfile"><br>
 
